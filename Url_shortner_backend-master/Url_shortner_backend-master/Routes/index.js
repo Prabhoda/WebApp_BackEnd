@@ -1,0 +1,10 @@
+const Router = require('express').Router()
+const Test = require('../Controllers/Test')
+const {Signup,Signin} = require('../Controllers/Users')
+const {ShortenUrl,GetUrls} = require('../Controllers/Urls')
+Router.get('/',Test)
+Router.post('/api/signup',Signup)
+Router.post('/api/signin',Signin)
+Router.get('/api/urls',GetUrls)
+Router.post('/api/shorten',ShortenUrl)
+module.exports = Router
